@@ -1,0 +1,168 @@
+#mylist {
+  width: 165px;
+  float: right;
+  background-color: darkgray;
+  color: white;
+  margin-bottom: 5px;
+}
+
+#myInput {
+  background-image: url('	https://www.w3schools.com/css/searchicon.png'); /* Add a search icon to input */
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 100%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+}
+.in-between {
+  border: black dashed 2px;
+}
+
+h2 {
+  text-align: center;
+  color: grey;
+  margin-bottom: 0 auto;
+}
+.vert-group {
+  text-align: center;
+}
+
+.isha {
+  font-size: 13px;
+  color: #17A2B8;
+}
+
+.shweta {
+  font-size: 13px;
+  color: #6C757D;
+}
+
+.abhinav {
+  font-size: 13px;
+  color: #0275d8;
+}
+
+.swathi {
+  font-size: 13px;
+  color: #5cb85c;
+}
+
+.btn-sm{
+  width: 50px;
+  margin: 5px;
+}
+
+body{
+    margin-top:20px;
+}
+.bg-light-gray {
+    background-color: #f7f7f7;
+}
+.table-bordered thead td, .table-bordered thead th {
+    border-bottom-width: 2px;
+}
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+}
+.table-bordered td, .table-bordered th {
+    border: 1px solid #dee2e6;
+}
+
+
+.bg-sky.box-shadow {
+    box-shadow: 0px 5px 0px 0px #00a2a7
+}
+
+.bg-orange.box-shadow {
+    box-shadow: 0px 5px 0px 0px #af4305
+}
+
+.bg-green.box-shadow {
+    box-shadow: 0px 5px 0px 0px #4ca520
+}
+
+.bg-yellow.box-shadow {
+    box-shadow: 0px 5px 0px 0px #dcbf02
+}
+
+.bg-pink.box-shadow {
+    box-shadow: 0px 5px 0px 0px #e82d8b
+}
+
+.bg-purple.box-shadow {
+    box-shadow: 0px 5px 0px 0px #8343e8
+}
+
+.bg-lightred.box-shadow {
+    box-shadow: 0px 5px 0px 0px #d84213
+}
+
+
+.bg-sky {
+    background-color: #02c2c7
+}
+
+.bg-orange {
+    background-color: #e95601
+}
+
+.bg-green {
+    background-color: #5bbd2a
+}
+
+.bg-yellow {
+    background-color: #f0d001
+}
+
+.bg-pink {
+    background-color: #ff48a4
+}
+
+.bg-purple {
+    background-color: #9d60ff
+}
+
+.bg-lightred {
+    background-color: #ff5722
+}
+
+.padding-15px-lr {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.padding-5px-tb {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.margin-10px-bottom {
+    margin-bottom: 10px;
+}
+.border-radius-5 {
+    border-radius: 5px;
+}
+
+.margin-10px-top {
+    margin-top: 10px;
+}
+.font-size14 {
+    font-size: 14px;
+}
+
+.text-light-gray {
+    color: #d6d5d5;
+}
+.font-size13 {
+    font-size: 13px;
+}
+
+.table-bordered td, .table-bordered th {
+    border: 1px solid #dee2e6;
+}
+.table td, .table th {
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}

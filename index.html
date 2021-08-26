@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="refresh" content="450">
+  <title>Sanketana Batch Dashboard</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>   
+  <link rel="stylesheet" href="style.css"> 
+</head>
+<body onload="highlightCurrDay()">
+<div class="container">
+                  <h2>Sanketana Weekly Timetable</h2>
+                  <select id="mylist" onchange="filterByTeacher()" class='form-control'>
+                    <option>Select Teacher</option>
+                    <option>Abhinav</option>
+                    <option>Isha</option>
+                    <option>Shweta</option>
+                    <option>Swathi</option>
+                  </select>
+                  <!--<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search to filter..">-->
+
+                <div class="table-responsive">
+                    <table class="table table-bordered text-center" id="myTable">
+                        <thead>
+                            <tr class="bg-light-gray">
+                                <th class="text-uppercase">Time
+                                </th>
+                                <th class="text-uppercase">Monday</th>
+                                <th class="text-uppercase">Tuesday</th>
+                                <th class="text-uppercase">Wednesday</th>
+                                <th class="text-uppercase">Thursday</th>
+                                <th class="text-uppercase">Friday</th>
+                                <th class="text-uppercase">Saturday</th>
+                                <th class="text-uppercase">Sunday</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <!-- Slot 5:00 am -->
+                            <tr>
+                                <td class="align-middle">05:00 am</td>
+                                <!-- Monday -->
+                                <td class="monday">
+                                </td>
+
+                                <!-- Tuesday -->
+                                <td class="tuesday">
+                                  
+                                  <div class="btn-group">
+                                    <!-- Teacher 1 -->
+                                    <div class="vert-group">
+                                      <a class="btn btn-info btn-sm" href="https://us02web.zoom.us/j/86572358171" target="_blank"">S14</a>
+                                      <div class="isha">Isha</div>
+                                    </div>
+
+                                    <!-- Teacher 2 -->
+                                    <div class="vert-group">
+                                    </div>     
+                                  </div>
+
+                                </td>
+
+                                <!-- Wednesday -->
+                                <td class="wednesday">
+                                </td>
+
+                                <!-- Thursday -->
+                                <td class="thursday">
+                                  <div class="btn-group">
+                                    <!-- Teacher 1 -->
+                                    <div class="vert-group">
+                                      <a class="btn btn-info btn-sm" href="https://us02web.zoom.us/j/86572358171" target="_blank"">S14</a>
+                                      <div class="isha">Isha</div>
+                                    </div>
+
+                                    <!-- Teacher 2 -->
+                                    <div class="vert-group">
+                                    </div>     
+                                  </div>                                  
+                                </td>
+
+
+                                <!-- Friday -->
+                                <td class="friday">
+                                </td>
+
+                                <!-- Saturday -->
+                                <td class="saturday">
+                                  <div class="btn-group">
+                                    <!-- Teacher 1 -->
+                                    <div class="vert-group">
+                                      <a class="btn btn-info btn-sm" href="https://us02web.zoom.us/j/81260819753?pwd=aG02SEdjWnV6dzBFUEFnMGIzZVJxQT09" target="_blank"">S17</a>
+                                      <div class="isha">Isha</div>
+                                    </div>
+
+                                    <!-- Teacher 2 -->
+                                    <div class="vert-group">
+                                    </div>     
+                                  </div>                                          
+                                </td>
+
+                                <!-- Sunday -->
+                                <td class="sunday">
+                                  <div class="btn-group">
+                                    <!-- Teacher 1 -->
+                                    <div class="vert-group">
+                                      <a class="btn btn-info btn-sm" href="https://us02web.zoom.us/j/81260819753?pwd=aG02SEdjWnV6dzBFUEFnMGIzZVJxQT09" target="_blank"">S17</a>
+                                      <div class="isha">Isha</div>
+                                    </div>
+
+                                    <!-- Teacher 2 -->
+                                    <div class="vert-group">
+                                    </div>     
+                                  </div>                                          
+                                </td>
+                                
+                            </tr>
+
+                            <!-- Slot 6:00 am -->
+                            <tr>
+                                <td class="align-middle">06:00 am</td>
+                                <!-- Monday -->                                
+                                <td class="monday">
+                                  <div class="btn-group">
+                                    <!-- Teacher 1 -->
+                                    <div class="vert-group">
+                                      <a class="btn btn-info btn-sm" href="https://us02web.zoom.us/j/82947698641?pwd=UVdvUk01L0tzenJjY01WUENGK1A2UT09" target="_blank"">J2</a>
+                                      <div class="isha">Isha</div>
+                                    </div>
+
+                                    <!-- Teacher 2 -->
+                                    <div class="vert-group">
+                                    </div>     
+                                  </div>                                          
+                                </td>                                
+
+                                <!-- Tuesday -->
+                                <td class="tuesday">
+                                  <div class="btn-group">
+                                    <!-- Teacher 1 -->
+                                    <div class="vert-group">
+                                      <a class="btn btn-secondary btn-sm" href="https://us02web.zoom.us/j/88918193299?pwd=UmFDQUtaQnJBQTcxTFJuNDRXWmdwUT09" target="_blank"">S19</a>
+                                      <div class="shweta">Shweta</div>
+                                    </div>
+
+                                    <!-- Teacher 2 -->
+                                    <div class="vert-group">
+                                    </div>     
+                                  </div>                                          
+                                </td> 
+
+                                <!-- Wednesday -->
+                                <td class="wednesday">
+                                  <div class="btn-group">
+                                    <!-- Teacher 1 -->
+                                    <div class="vert-group">
+                                      <a class="btn btn-info btn-sm" href="https://us02web.zoom.us/j/85310550976?pwd=RmwwVThVZExzTnA5ZnpreVZtOTlvQT09" target="_blank"">S8</a>
+                                      <div class="isha">Isha</div>
+                                    </div>
+
+                                    <!-- Teacher 2 -->
+                                    <div class="vert-group">
+                                    </div>     
+                                  </div>                                          
+                                </td>                                
+
+                                <!-- Thursday -->
+                                <td class="thursday">
+                                  <div class="btn-group">
+                                    <!-- Teacher 1 -->
+                                    <div class="vert-group">
+                                      <a class="btn btn-info btn-sm" href="https://us02web.zoom.us/j/82947698641?pwd=UVdvUk01L0tzenJjY01WUENGK1A2UT09" target="_blank"">J2</a>
+                                      <div class="isha">Isha</div>
+                                    </div>
+
+                                    <!-- Teacher 2 -->
+                                    <div class="vert-group">
+                                    </div>     
+                                  </div>                                          
+                                </td>                                
+
+                                <!-- Friday -->
+                                <td class="friday">
+                                  <div class="btn-group">
+                                    <div class="vert-group">
+                                      <a class="btn btn-info btn-sm" href="https://us02web.zoom.us/j/85310550976?pwd=RmwwVThVZExzTnA5ZnpreVZtOTlvQT09" target="_blank">S8</a>
+                                      <div class="isha">Isha</div>
+                                    </div>
+                                    <div class="vert-group">
+                                      <a class="btn btn-secondary btn-sm" href="https://us02web.zoom.us/j/88918193299?pwd=UmFDQUtaQnJBQTcxTFJuNDRXWmdwUT09" target="_blank">S19</a>        
+                                      <div class="shweta">Shweta</div>
+                                    </div>                                                                                 
+                                  </div>
+
+                                </td>
+
+                                 <!-- Saturday -->                               
+                                <td class="saturday"></td>
+
+                                 <!-- Sunday -->                               
+                                <td class="sunday"></td>
+                            </tr>
+
+                            <!-- Slot 1:30 pm -->
+                            <tr>
+                                <td class="align-middle">01:30 pm</td>
+                                <!-- Monday -->
+                                <td class="monday">
+                                  <div class="btn-group">
+                                    <!-- Teacher 1 -->
+                                    <div class="vert-group">
+                                      <a class="btn btn-info btn-sm" href="https://us02web.zoom.us/j/84324772830?pwd=Ylc1VWdGWUR2TGI0eENQbHFibEhuUT09" target="_blank"">S10</a>
+                                      <div class="isha">Isha</div>
+                                    </div>
+
+                                    <!-- Teacher 2 -->
+                                    <div class="vert-group">
+                                    </div>     
+                                  </div>                                          
+                                </td> 
+
+                                <!-- Tuesday -->
+                                <td class="tuesday">
+                                  <div class="btn-group">
+                                    <!-- Teacher 1 -->
+                                    <div class="vert-group">
+                                      <a class="btn btn-info btn-sm" href="https://us02web.zoom.us/j/84324772830?pwd=Ylc1VWdGWUR2TGI0eENQbHFibEhuUT09" target="_blank"">S10</a>
+                                      <div class="isha">Isha</div>
+                                    </div>
+
+                                    <!-- Teacher 2 -->
+                                    <div class="vert-group">
+                                    </div>     
+                                  </div>                                          
+                                </td> 
+
+                                <!-- Wednesday -->
+                                <td class="wednesday">
+                                  <div class="btn-group">
+                                    <!-- Teacher 1 -->
+                                    <div class="vert-group">
+                                      <a class="btn btn-info btn-sm" href="https://us02web.zoom.us/j/84324772830?pwd=Ylc1VWdGWUR2TGI0eENQbHFibEhuUT09" target="_blank"">S10</a>
+                                      <div class="isha">Isha</div>
+                                    </div>
+
+                                    <!-- Teacher 2 -->
+                                    <div class="vert-group">
+                                    </div>     
+                                  </div>                                          
+                                </td> 
+
+                                <!-- Thursday -->
+                                <td class="thursday">
+                                  <div class="btn-group">
+                                    <!-- Teacher 1 -->
+                                    <div class="vert-group">
+                                      <a class="btn btn-info btn-sm" href="https://us02web.zoom.us/j/84324772830?pwd=Ylc1VWdGWUR2TGI0eENQbHFibEhuUT09" target="_blank"">S10</a>
+                                      <div class="isha">Isha</div>
+                                    </div>
+
+                                    <!-- Teacher 2 -->
+                                    <div class="vert-group">
+                                    </div>     
+                                  </div>                                          
+                                </td> 
+
+                                <!-- Friday -->
+                                <td class="friday"></td>
+
+                                 <!-- Saturday -->                               
+                                <td class="saturday">
+                                  <div class="btn-group">
+                                    <!-- Teacher 1 -->
+                                    <div class="vert-group">
+                                      <a class="btn btn-info btn-sm" href="https://us02web.zoom.us/j/81612346901?pwd=MmJMT3JublBCT255R21CZmcyc0pUUT09" target="_blank"">S9</a>
+                                      <div class="isha">Isha</div>
+                                    </div>
+
+                                    <!-- Teacher 2 -->
+                                    <div class="vert-group">
+                                    </div>     
+                                  </div>                                          
+                                </td> 
+                                 <!-- Sunday -->                               
+                                <td class="sunday"></td>
+                            </tr>
+
+                            <!-- Slot 2:30 pm -->
+                            <tr>
+                                <!-- Monday -->
+                                <td class="align-middle">02:30 pm</td>
+                                <td class="monday">
+                                  <div class="btn-group">
+                                    <!-- Teacher 1 -->
+                                    <div class="vert-group">
+                                      <a class="btn btn-info btn-sm" href="https://us02web.zoom.us/j/83061664098?pwd=N1MwMzlvanl6YjR1Uk5pL0pROFNGQT09" target="_blank"">S6</a>
+                                      <div class="shweta">Shweta</div>
+                                    </div>
+
+                                    <!-- Teacher 2 -->
+                                    <div class="vert-group">
+                                    </div>     
+                                  </div>                                          
+                                </td>
+
+                                <!-- Tuesday -->
+                                <td class="tuesday">
+                                  <div class="btn-group">
+                                    <!-- Teacher 1 -->
+                                    <div class="vert-group">
+                                      <a class="btn btn-info btn-sm" href="https://us02web.zoom.us/j/88590393710?pwd=TUVmd052ZXRMcFhTcGpNMWNlR1ptdz09" target="_blank"">S5</a>
+                                      <div class="shweta">Shweta</div>
+                                    </div>
+                                    <!-- Teacher 2 -->
+                                    <div class="vert-group">
+                                      <a class="btn btn-secondary btn-sm" href="https://us02web.zoom.us/j/84165233569?pwd=eU41U3VvQXMyaUVNZWFveEd0Y1JoZz09" target="_blank"">S7</a>
+                                      <div class="abhinav">Abhinav</div>
+                                    </div>  
+                                  </div>                                          
+                                </td>
+
+                                <!-- Wednesday -->
+                                <td class="wednesday">
+                                  <div class="btn-group">
+                                    <!-- Teacher 1 -->
+                                    <div class="vert-group">
+                                      <a class="btn btn-info btn-sm" href="https://us02web.zoom.us/j/83061664098?pwd=N1MwMzlvanl6YjR1Uk5pL0pROFNGQT09" target="_blank"">S6</a>
+                                      <div class="shweta">Shweta</div>
+                                    </div>
+                                    <!-- Teacher 2 -->
+                                    <div class="vert-group">
+                                      <a class="btn btn-secondary btn-sm" href="https://us02web.zoom.us/j/89283346607?pwd=OTZnK2NQbFdIQTBXV0xkNkhQMWttQT09" target="_blank"">S16</a>
+                                      <div class="swathi">Swathi</div>
+                                    </div>  
+                                  </div>                                          
+                                </td>
+
+                                <!-- Thursday -->
+                                <td class="thursday">
+                                  <div class="btn-group">
+                                    <!-- Teacher 1 -->
+                                    <div class="vert-group">
+                                      <a class="btn btn-info btn-sm" href="https://us02web.zoom.us/j/88590393710?pwd=TUVmd052ZXRMcFhTcGpNMWNlR1ptdz09" target="_blank"">S5</a>
+                                      <div class="shweta">Shweta</div>
+                                    </div>
+                                    <!-- Teacher 2 -->
+                                    <div class="vert-group">
+                                    </div>  
+                                  </div>                                          
+                                </td>        
+
+                                <!-- Friday -->
+                                <td class="friday">
+                                  <div class="btn-group">
+                                    <!-- Teacher 1 -->
+                                    <div class="vert-group">
+                                      <a class="btn btn-secondary btn-sm" href="https://us02web.zoom.us/j/89283346607?pwd=OTZnK2NQbFdIQTBXV0xkNkhQMWttQT09" target="_blank"">S16</a>
+                                      <div class="swathi">Swathi</div>
+                                    </div>
+                                    <!-- Teacher 2 -->
+                                    <div class="vert-group">
+                                      <a class="btn btn-warning btn-sm" href="https://us04web.zoom.us/j/5682873365?pwd=SVJFQnh2L2dRS0tmbHA1d3hDeCtJUT09" target="_blank"">S7</a>
+                                      <div class="abhinav">Abhinav</div>
+                                    </div>  
+                                  </div>                                          
+                                </td>
+
+                                <!-- Saturday -->
+                                <td class="saturday">
+                                  <div class="btn-group">
+                                    <!-- Teacher 1 -->
+                                    <div class="vert-group">
+                                      <a class="btn btn-info btn-sm" href="https://us02web.zoom.us/j/81612346901?pwd=MmJMT3JublBCT255R21CZmcyc0pUUT09" target="_blank"">S9</a>
+                                      <div class="isha">Isha</div>
+                                    </div>
+
+                                    <!-- Teacher 2 -->
+                                    <div class="vert-group">
+                                    </div>     
+                                  </div>                                          
+                                </td> 
+                                
+                                <!-- Sunday -->                               
+                                <td class="sunday"></td>                                
+                            </tr>
+
+                            <!-- Slot 4:00 pm -->
+                            <tr>
+                                <td class="align-middle">04:00 pm</td>
+                                <!-- Monday -->
+                                <td class="monday">
+                                  <div class="btn-group">
+                                    <!-- Teacher 1 -->
+                                    <div class="vert-group">
+                                      <a class="btn btn-secondary btn-sm" href="https://us02web.zoom.us/j/84845758466?pwd=TklPUzNPck1WYmF2Y2xnSUZYMkxRQT09" target="_blank"">S3</a>
+                                      <div class="abhinav">Abhinav</div>
+                                    </div>
+
+                                    <!-- Teacher 2 -->
+                                    <div class="vert-group">
+                                    </div>     
+                                  </div>                                          
+                                </td>
+
+                                <!-- Tuesday -->
+                                <td class="tuesday">
+                                  <div class="btn-group">
+                                    <!-- Teacher 1 -->
+                                    <div class="vert-group">
+                                      <a class="btn btn-secondary btn-sm" href="https://us02web.zoom.us/j/87012849502?pwd=eWtMcG9LNUJLeHZMY2IxY1hlZ3Ridz09" target="_blank"">S15</a>
+                                      <div class="abhinav">Abhinav</div>
+                                    </div>
+
+                                    <!-- Teacher 2 -->
+                                    <div class="vert-group">
+                                    </div>     
+                                  </div>                                          
+                                </td>
+
+                                <!-- Wednesday -->
+                                <td class="wednesday">
+                                  <div class="btn-group">
+                                    <!-- Teacher 1 -->
+                                    <div class="vert-group">
+                                      <a class="btn btn-secondary btn-sm" href="https://us02web.zoom.us/j/84638564205?pwd=bGFVbGhqWmxwOHYzdndFczdHY05MQT09" target="_blank"">S4</a>
+                                      <div class="abhinav">Abhinav</div>
+                                    </div>
+
+                                    <!-- Teacher 2 -->
+                                    <div class="vert-group">
+                                    </div>     
+                                  </div>                                          
+                                </td>
+
+                                <!-- Thursday -->
+                                <td class="thursday">
+                                  <div class="btn-group">
+                                    <!-- Teacher 1 -->
+                                    <div class="vert-group">
+                                      <a class="btn btn-secondary btn-sm" href="https://us02web.zoom.us/j/87012849502?pwd=eWtMcG9LNUJLeHZMY2IxY1hlZ3Ridz09" target="_blank"">S15</a>
+                                      <div class="abhinav">Abhinav</div>
+                                    </div>
+
+                                    <!-- Teacher 2 -->
+                                    <div class="vert-group">
+                                    </div>     
+                                  </div>                                          
+                                </td>
+
+                                <!-- Friday -->
+                                <td class="friday">
+                                  <div class="btn-group">
+                                    <!-- Teacher 1 -->
+                                    <div class="vert-group">
+                                      <a class="btn btn-secondary btn-sm" href="https://us02web.zoom.us/j/84638564205?pwd=bGFVbGhqWmxwOHYzdndFczdHY05MQT09" target="_blank"">S4</a>
+                                      <div class="abhinav">Abhinav</div>
+                                    </div>
+
+                                    <!-- Teacher 2 -->
+                                    <div class="vert-group">
+                                    </div>     
+                                  </div>                                          
+                                </td>
+                                
+                                <!-- Saturday -->                               
+                                <td class="saturday"></td>    
+
+                                <!-- Sunday -->                               
+                                <td class="sunday"></td>      
+
+                            </tr>   
+
+
+                            <!-- Slot 5:00 pm -->
+                            <tr>
+                                <td class="align-middle">05:00 pm</td>
+                                <!-- Monday -->
+                                <td class="monday">
+                                  <div class="btn-group">
+                                    <!-- Teacher 1 -->
+                                    <div class="vert-group">
+                                      <a class="btn btn-info btn-sm" href="https://us02web.zoom.us/j/89095897936?pwd=UXJOdGl3YXZHOTJOWlhYeE9kOGEvQT09" target="_blank"">S20</a>
+                                      <div class="shweta">Shweta</div>
+                                    </div>
+                                    <!-- Teacher 2 -->
+                                    <div class="vert-group">
+                                      <a class="btn btn-secondary btn-sm" href="https://us02web.zoom.us/j/83080516457?pwd=aVBLUng1RG5oV0Uza2V1dVRDRWcrUT09" target="_blank"">S18</a>
+                                      <div class="swathi">Swathi</div>
+                                    </div>  
+                                  </div>                                          
+                                </td>
+
+                                <!-- Tuesday -->
+                                <td class="tuesday">
+                                  <div class="btn-group">
+                                    <!-- Teacher 1 -->
+                                    <div class="vert-group">
+                                    </div>
+
+                                    <!-- Teacher 2 -->
+                                    <div class="vert-group">
+                                    </div>     
+                                  </div>                                          
+                                </td>
+
+                                <!-- Wednesday -->
+                                <td class="wednesday">
+                                  <div class="btn-group">
+                                    <!-- Teacher 1 -->
+                                    <div class="vert-group">
+                                      <a class="btn btn-info btn-sm" href="https://us02web.zoom.us/j/89095897936?pwd=UXJOdGl3YXZHOTJOWlhYeE9kOGEvQT09" target="_blank"">S20</a>
+                                      <div class="shweta">Shweta</div>
+                                    </div>
+                                    <!-- Teacher 2 -->
+                                    <div class="vert-group">
+                                      <a class="btn btn-secondary btn-sm" href="https://us02web.zoom.us/j/83080516457?pwd=aVBLUng1RG5oV0Uza2V1dVRDRWcrUT09" target="_blank"">S18</a>
+                                      <div class="swathi">Swathi</div>
+                                    </div>  
+                                  </div>                                          
+                                </td>
+
+                                <!-- Thursday -->
+                                <td class="thursday">
+                                  <div class="btn-group">
+                                    <!-- Teacher 1 -->
+                                    <div class="vert-group">
+                                    </div>
+
+                                    <!-- Teacher 2 -->
+                                    <div class="vert-group">
+                                    </div>     
+                                  </div>                                          
+                                </td>
+
+                                <!-- Friday -->
+                                <td class="friday">
+                                  <div class="btn-group">
+                                    <!-- Teacher 1 -->
+                                    <div class="vert-group">
+                                      <a class="btn btn-info btn-sm" href="https://us02web.zoom.us/j/89095897936?pwd=UXJOdGl3YXZHOTJOWlhYeE9kOGEvQT09" target="_blank"">S20</a>
+                                      <div class="shweta">Shweta</div>
+                                    </div>
+                                    <!-- Teacher 2 -->
+                                    <div class="vert-group">
+                                    </div>  
+                                  </div>                                          
+                                </td>
+
+                                 <!-- Saturday -->                               
+                                <td class="saturday"></td>
+
+                                 <!-- Sunday -->                               
+                                <td class="sunday"></td>
+
+                            </tr>
+
+                            <!-- Slot 6:00 pm -->
+                            <tr>
+                                <td class="align-middle">06:00 pm</td>
+                                <!-- Monday -->            
+                                <td class="monday">
+                                  <div class="btn-group">
+                                    <!-- Teacher 1 -->
+                                    <div class="vert-group">
+                                      <a class="btn btn-info btn-sm" href="https://us02web.zoom.us/j/82849869332?pwd=bVQ0d3c1Sk43N3VaQzFNOTBCOHdVQT09" target="_blank"">S12</a>
+                                      <div class="shweta">Shweta</div>
+                                    </div>
+
+                                    <!-- Teacher 2 -->
+                                      <div class="vert-group">
+                                        <a class="btn btn-secondary btn-sm" href="https://us02web.zoom.us/j/87342362252?pwd=OVo2ZTJxMkg0cS9tYlU3UjcyV3hjUT09" target="_blank"">S2</a>
+                                        <div class="abhinav">Abhinav</div>
+                                    </div>  
+                                  </div>                                    
+                                </td>
+
+                                <!-- Tuesday -->            
+                                <td class="tuesday">
+                                  <div class="btn-group">
+                                    <!-- Teacher 1 -->
+                                    <div class="vert-group">
+                                      <a class="btn btn-info btn-sm" href="https://us02web.zoom.us/j/88633220439?pwd=d0dWK09QRHV5aGhIZjgyb2FxMkJ0QT09" target="_blank"">S11</a>
+                                      <div class="shweta">Shweta</div>
+                                    </div>
+
+                                    <!-- Teacher 2 -->
+                                      <div class="vert-group">
+                                        <a class="btn btn-secondary btn-sm" href="https://us02web.zoom.us/j/89671561913?pwd=NEF3ZS9lSHl1YUJtZTRPeWVQYnM3UT09" target="_blank"">S1</a>
+                                        <div class="abhinav">Abhinav</div>
+                                      </div>  
+                                    </div>                                    
+                                </td>   
+
+                                <!-- Wednesday -->            
+                                <td class="wednesday">
+                                  <div class="btn-group">
+                                    <!-- Teacher 1 -->
+                                    <div class="vert-group">
+                                    </div>
+
+                                    <!-- Teacher 2 -->
+                                      <div class="vert-group">
+                                        <a class="btn btn-secondary btn-sm" href="https://us02web.zoom.us/j/84845758466?pwd=TklPUzNPck1WYmF2Y2xnSUZYMkxRQT09" target="_blank"">S3</a>
+                                        <div class="abhinav">Abhinav</div>
+                                      </div>  
+                                    </div>                                    
+                                </td>   
+
+                                <!-- Thursday -->            
+                                <td class="thursday">
+                                  <div class="btn-group">
+                                    <!-- Teacher 1 -->
+                                    <div class="vert-group">
+                                      <a class="btn btn-info btn-sm" href="https://us02web.zoom.us/j/88633220439?pwd=d0dWK09QRHV5aGhIZjgyb2FxMkJ0QT09" target="_blank"">S11</a>
+                                      <div class="shweta">Shweta</div>
+                                    </div>
+
+                                    <!-- Teacher 2 -->
+                                      <div class="vert-group">
+                                        <a class="btn btn-secondary btn-sm" href="https://us02web.zoom.us/j/87342362252?pwd=OVo2ZTJxMkg0cS9tYlU3UjcyV3hjUT09" target="_blank"">S2</a>
+                                        <div class="abhinav">Abhinav</div>
+                                      </div>  
+                                    </div>                                    
+                                </td>   
+
+                                <!-- Friday -->            
+                                <td class="friday">
+                                  <div class="btn-group">
+                                    <!-- Teacher 1 -->
+                                    <div class="vert-group">
+                                      <a class="btn btn-info btn-sm" href="https://us02web.zoom.us/j/82849869332?pwd=bVQ0d3c1Sk43N3VaQzFNOTBCOHdVQT09" target="_blank"">S12</a>
+                                      <div class="shweta">Shweta</div>
+                                    </div>
+
+                                    <!-- Teacher 2 -->
+                                      <div class="vert-group">
+                                        <a class="btn btn-secondary btn-sm" href="https://us02web.zoom.us/j/89671561913?pwd=NEF3ZS9lSHl1YUJtZTRPeWVQYnM3UT09" target="_blank"">S1</a>
+                                        <div class="abhinav">Abhinav</div>
+                                      </div>  
+                                    </div>                                    
+                                </td>   
+                                
+                                <!-- Saturday -->                               
+                                <td class="saturday"></td>    
+
+                                <!-- Sunday -->                               
+                                <td class="sunday"></td>    
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>  
+  <script>
+      function filterByTeacher() {
+        var input, filter, table, tr, td, i, j, k, txtValue, ts;
+        input = document.getElementById("mylist");
+        filter = input.value.toUpperCase();
+
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        if (filter == "SELECT TEACHER") {
+          for (i = 1; i < tr.length; i++) {
+            tr[i].style.display = "";            
+          }
+          return;
+        }        
+        for (i = 1; i < tr.length; i++) {
+          var found = 0;
+          for (j = 1; j <= 7; j++) {
+            td = tr[i].getElementsByTagName("td")[j];
+            if (td) {
+              txtValue = td.textContent || td.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                found = 1;
+              }
+            } 
+          }
+          if (found == 1) {
+                tr[i].style.display = "";
+          } else {
+                tr[i].style.display = "none";
+          }
+        }
+      };
+
+      function highlightCurrDay() {
+        var d = new Date();
+        var n = d.getDay();
+        var h = d.getHours();
+        var dow = {
+          1 : "monday",
+          2 : "tuesday",
+          3 : "wednesday",
+          4 : "thursday", 
+          5 : "friday",
+          6 : "saturday",
+          7 : "sunday"
+        }
+        var cols = document.getElementsByClassName(dow[n]);
+        for(i = 0; i < cols.length; i++) {
+          cols[i].style.backgroundColor = 'whitesmoke';
+        }
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr"); 
+        var tod = {
+          5 : 1,
+          6 : 2,
+          13 : 3,
+          14 : 4,
+          16 : 5,
+          17 : 6,
+          18 : 7
+        }   
+
+        if (h in tod) {
+          td = tr[tod[h]].getElementsByTagName("td")[n];  
+          td.style.border = "thick solid #B83923";  
+        }
+
+        if (h+1 in tod) {
+          td = tr[tod[h+1]].getElementsByTagName("td")[n];         
+          td.style.border = "thick solid #D49972";  
+        }
+
+      };
+  </script>            
+</body>
+</html>
