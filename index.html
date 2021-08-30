@@ -276,6 +276,18 @@
                                   <div class="btn-group">
                                     <!-- Teacher 1 -->
                                     <div class="vert-group">
+                                    </div>
+
+                                    <!-- Teacher 2 -->
+                                    <div class="vert-group">
+                                    </div>     
+                                  </div>                                          
+                                </td> 
+                                 <!-- Sunday -->                               
+                                  <td class="sunday">
+                                  <div class="btn-group">
+                                    <!-- Teacher 1 -->
+                                    <div class="vert-group">
                                       <a class="btn btn-info btn-sm" href="https://us02web.zoom.us/j/81612346901?pwd=MmJMT3JublBCT255R21CZmcyc0pUUT09" target="_blank"">S9</a>
                                       <div class="isha">Isha</div>
                                     </div>
@@ -285,8 +297,6 @@
                                     </div>     
                                   </div>                                          
                                 </td> 
-                                 <!-- Sunday -->                               
-                                <td class="sunday"></td>
                             </tr>
 
                             <!-- Slot 2:30 pm -->
@@ -698,13 +708,13 @@
         var n = d.getDay();
         var h = d.getHours();
         var dow = {
+          0 : "sunday",
           1 : "monday",
           2 : "tuesday",
           3 : "wednesday",
           4 : "thursday", 
           5 : "friday",
-          6 : "saturday",
-          7 : "sunday"
+          6 : "saturday"
         }
         var cols = document.getElementsByClassName(dow[n]);
         for(i = 0; i < cols.length; i++) {
