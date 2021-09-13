@@ -16,8 +16,9 @@
   border: 1px solid #ddd; /* Add a grey border */
   margin-bottom: 12px; /* Add some space below the input */
 }
-.in-between {
-  border: black dashed 2px;
+.between {
+  font-size: 11px;
+  color:  darkred;
 }
 
 h2 {
