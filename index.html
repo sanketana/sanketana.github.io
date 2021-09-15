@@ -710,16 +710,18 @@
 
       function highlightCurrDay() {
         var d = new Date();
-        var n = d.getDay();
+        //var n = d.getDay();
+        // Fix for sunday as the Sunday return 0 whereas Sunday is in column 7 in our HTML
+        var n = (d.getDay() == 0) ? 7 : d.getDay();
         var h = d.getHours();
         var dow = {
-          0 : "sunday",
           1 : "monday",
           2 : "tuesday",
           3 : "wednesday",
           4 : "thursday", 
           5 : "friday",
-          6 : "saturday"
+          6 : "saturday",
+          7 : "sunday"
         }
         var cols = document.getElementsByClassName(dow[n]);
         for(i = 0; i < cols.length; i++) {
@@ -731,20 +733,26 @@
           5 : 1,
           6 : 2,
           13 : 3,
-          14 : 4,
+          15 : 4,
           16 : 5,
           17 : 6,
           18 : 7
         }   
 
         if (h in tod) {
-          td = tr[tod[h]].getElementsByTagName("td")[n];  
-          td.style.border = "thick solid #B83923";  
+          td = tr[tod[h]].getElementsByTagName("td")[n];
+          //Highlight only if the Cell is non-empty  
+          if (td.innerHTML != '') {
+            td.style.border = "thick solid #B83923";
+          }  
         }
 
         if (h+1 in tod) {
-          td = tr[tod[h+1]].getElementsByTagName("td")[n];         
-          td.style.border = "thick solid #D49972";  
+          td = tr[tod[h+1]].getElementsByTagName("td")[n];    
+          //Highlight only if the Cell is non-empty  
+          if (td.innerHTML != '') {
+            td.style.border = "thick solid #D49972";  
+          }
         }
 
       };
