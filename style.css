@@ -51,7 +51,7 @@ h2 {
 }
 
 .saranya {
-  font-size: 13px;
+  font-size: 13px !important;
   color: #212529;
 }
 
