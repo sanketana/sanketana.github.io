@@ -1,3 +1,3 @@
 # Sanketana Weekly Calendar
 
-Handcrafted HTML dashboard to keep track of Sanketana batches
+Weekly dashboard to keep track of Sanketana batches
