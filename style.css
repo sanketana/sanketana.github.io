@@ -1,5 +1,13 @@
-#mylist,
-#courseList {
+#mylist{
+  width: 175px;
+  float: right;
+  background-color: darkgray;
+  color: white;
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+
+#courseList{
   width: 175px;
   float: right;
   background-color: darkgray;
