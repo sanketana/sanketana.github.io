@@ -49,16 +49,30 @@
   <body onload="highlightCurrDay()">
     <div class="container-md">
       <h2>Sanketana Weekly Timetable</h2>
-      <select id="mylist" onchange="filterByTeacher()" class="form-control">
-        <option>Select Teacher</option>
-        <option>Abhinav</option>
-        <option>Shweta</option>
-        <option>Saranya</option>
-        <option>Chhavi</option>
-        <option>Preeti</option>
-        <option>Shikha</option>
-      </select>
-      <!--<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search to filter..">-->
+      <div style="display:flex; flex-direction: row; float: right; justify-content: center; align-items: center">
+        <select id="courseList" onchange="filterByCourse()" class="form-control">
+          <option>Select Course</option>
+          <option>Scratch L1</option>
+          <option>Scratch L2</option>
+          <option>MIT App</option>
+          <option>HTML/CSS</option>
+          <option>JavaScript</option>         
+          <option>AI/ML</option>
+          <option>Python Beginner</option>
+          <option>Python Intermediate</option>
+          <option>Python Advanced</option>
+        </select>       
+        <select id="mylist" onchange="filterByTeacher()" class="form-control">
+          <option>Select Teacher</option>
+          <option>Abhinav</option>
+          <option>Shweta</option>
+          <option>Saranya</option>
+          <option>Chhavi</option>
+          <option>Preeti</option>
+          <option>Shikha</option>
+        </select>
+      </div>
+
 
       <div class="table-responsive">
         <table class="table table-bordered text-center" id="myTable">
@@ -83,7 +97,7 @@
                 <div class="btn-group">
 
                   <!-- Teacher -->
-                  <div class="vert-group preeti">
+                  <div class="vert-group preeti" data-id="S39">
                     <a
                       class="btn btn-dark btn-sm"
                       href="https://us02web.zoom.us/j/86908367520"
@@ -100,7 +114,7 @@
               <td class="tuesday day-group">
                 <div class="btn-group">
                   <!-- Teacher -->
-                  <div class="vert-group shikha">
+                  <div class="vert-group shikha" data-id="S49">
                     <a
                       class="btn btn-info btn-sm"
                       href="https://us02web.zoom.us/j/89452993960"
@@ -116,7 +130,7 @@
               <td class="wednesday day-group">
                 <div class="btn-group">
                   <!-- Teacher -->
-                  <div class="vert-group chhavi">
+                  <div class="vert-group chhavi" data-id="S14">
                     <a
                       class="btn btn-secondary btn-sm"
                       href="https://us02web.zoom.us/j/89293670834"
@@ -135,7 +149,7 @@
               <td class="friday day-group">
                 <div class="btn-group">
                   <!-- Teacher -->
-                  <div class="vert-group preeti">
+                  <div class="vert-group preeti" data-id="S39">
                     <a
                       class="btn btn-dark btn-sm"
                       href="https://us02web.zoom.us/j/86908367520"
@@ -146,7 +160,7 @@
                     <div class="between">6:30</div>
                   </div>    
                   <!-- Teacher -->
-                  <div class="vert-group shikha">
+                  <div class="vert-group shikha" data-id="S49">
                     <a
                       class="btn btn-info btn-sm"
                       href="https://us02web.zoom.us/j/89452993960"
@@ -162,7 +176,7 @@
               <td class="sunday day-group">
                 <div class="btn-group">               
                   <!-- Teacher -->
-                  <div class="vert-group chhavi">
+                  <div class="vert-group chhavi" data-id="S14">
                     <a
                       class="btn btn-secondary btn-sm"
                       href="https://us02web.zoom.us/j/89293670834"
@@ -184,7 +198,7 @@
               <td class="monday day-group">
                 <div class="btn-group">
                   <!-- Teacher -->
-                  <div class="vert-group shweta">
+                  <div class="vert-group shweta" data-id="S26">
                     <a
                       class="btn btn-primary btn-sm"
                       href="https://us02web.zoom.us/j/81735430254"
@@ -194,7 +208,7 @@
                     <div class="shweta">Shweta</div>
                   </div>                  
                   <!-- Teacher -->
-                  <div class="vert-group shikha">
+                  <div class="vert-group shikha" data-id="S45">
                     <a
                       class="btn btn-info btn-sm"
                       href="https://us02web.zoom.us/j/87336406108"
@@ -209,7 +223,7 @@
               <td class="tuesday day-group">
                 <div class="btn-group">
                   <!-- Teacher -->
-                  <div class="vert-group shweta">
+                  <div class="vert-group shweta" data-id="S26A">
                     <a
                       class="btn btn-primary btn-sm"
                       href="https://us02web.zoom.us/j/82372278224"
@@ -225,7 +239,7 @@
               <td class="wednesday day-group">
                 <div class="btn-group">
                   <!-- Teacher -->
-                  <div class="vert-group shweta">
+                  <div class="vert-group shweta" data-id="S43">
                     <a
                       class="btn btn-info btn-sm"
                       href="https://us02web.zoom.us/j/89781374858"
@@ -241,7 +255,7 @@
               <td class="thursday day-group">
                 <div class="btn-group">
                   <!-- Teacher -->
-                  <div class="vert-group shweta">
+                  <div class="vert-group shweta" data-id="S26">
                     <a
                       class="btn btn-primary btn-sm"
                       href="https://us02web.zoom.us/j/81735430254"
@@ -251,7 +265,7 @@
                     <div class="shweta">Shweta</div>
                   </div>                     
                   <!-- Teacher -->
-                  <div class="vert-group shikha">
+                  <div class="vert-group shikha" data-id="S45">
                     <a
                       class="btn btn-info btn-sm"
                       href="https://us02web.zoom.us/j/87336406108"
@@ -286,7 +300,7 @@
 
                 <div class="btn-group">
                   <!-- Teacher -->
-                  <div class="vert-group shweta">
+                  <div class="vert-group shweta" data-id="S37">
                     <a
                       class="btn btn-primary btn-sm"
                       href="https://us02web.zoom.us/j/81113888516"
@@ -305,7 +319,7 @@
               <td class="friday day-group">
                 <div class="btn-group">
                   <!-- Teacher -->
-                  <div class="vert-group shweta">
+                  <div class="vert-group shweta" data-id="S37">
                     <a
                       class="btn btn-primary btn-sm"
                       href="https://us02web.zoom.us/j/81113888516"
@@ -331,7 +345,7 @@
               <td class="monday day-group">
                 <div class="btn-group">
                   <!-- Teacher -->
-                  <div class="vert-group shweta">
+                  <div class="vert-group shweta" data-id="S28">
                     <a
                       class="btn btn-primary btn-sm"
                       href="https://us02web.zoom.us/j/89327376992"
@@ -353,7 +367,7 @@
               <td class="thursday day-group">
                 <div class="btn-group">
                   <!-- Teacher -->
-                  <div class="vert-group shweta">
+                  <div class="vert-group shweta" data-id="S28">
                     <a
                       class="btn btn-primary btn-sm"
                       href="https://us02web.zoom.us/j/89327376992"
@@ -383,7 +397,7 @@
               <td class="monday day-group">
                 <div class="btn-group">
                   <!-- Teacher -->
-                  <div class="vert-group saranya">
+                  <div class="vert-group saranya" data-id="S47">
                     <a
                       class="btn btn-primary btn-sm"
                       href="https://us02web.zoom.us/j/82847030819"
@@ -404,7 +418,7 @@
               <td class="thursday day-group">
                 <div class="btn-group">
                   <!-- Teacher -->
-                  <div class="vert-group saranya">
+                  <div class="vert-group saranya" data-id="S47">
                     <a
                       class="btn btn-primary btn-sm"
                       href="https://us02web.zoom.us/j/82847030819"
@@ -433,10 +447,10 @@
               <td class="monday day-group">
                 <div class="btn-group">
                   <!-- Teacher -->
-                  <div class="vert-group saranya">
+                  <div class="vert-group saranya" data-id="S48">
                     <a
                       class="btn btn-primary btn-sm"
-                      href="https://us02web.zoom.us/j/xxxxxxxxxxx"
+                      href="https://us02web.zoom.us/j/84517400717"
                       target="_blank"
                       >S48</a
                     >
@@ -454,10 +468,10 @@
               <td class="thursday day-group">
                 <div class="btn-group">
                   <!-- Teacher -->
-                  <div class="vert-group saranya">
+                  <div class="vert-group saranya" data-id="S48">
                     <a
                       class="btn btn-primary btn-sm"
-                      href="https://us02web.zoom.us/j/xxxxxxxxx"
+                      href="https://us02web.zoom.us/j/84517400717"
                       target="_blank"
                       >S48</a
                     >
@@ -486,7 +500,7 @@
               <td class="tuesday day-group">
                 <div class="btn-group">
                   <!-- Teacher -->
-                  <div class="vert-group shweta">
+                  <div class="vert-group shweta" data-id="J4">
                     <a
                       class="btn btn-secondary btn-sm"
                       href="https://us02web.zoom.us/j/88187220620?pwd=NVpsYWZlN1FrNmlyYklGREplUmhKQT09"
@@ -508,18 +522,17 @@
               <td class="friday day-group">
                 <div class="btn-group">
                   <!-- Teacher -->
-                  <div class="vert-group shweta hide">
+                  <div class="vert-group shweta hide" data-id="S6">
                     <a
                       class="btn btn-info btn-sm"
                       href="https://us02web.zoom.us/j/XXXXXXXXXX"
-                      target="_blank"
                       target="_blank"
                       >S6</a
                     >
                     <div class="shweta">Shweta</div>
                   </div>
                   <!-- Teacher -->
-                  <div class="vert-group shweta">
+                  <div class="vert-group shweta" data-id="J4">
                     <a
                       class="btn btn-secondary btn-sm"
                       href="https://us02web.zoom.us/j/88187220620?pwd=NVpsYWZlN1FrNmlyYklGREplUmhKQT09"
@@ -545,7 +558,7 @@
               <td class="monday day-group">
                 <div class="btn-group">
                   <!-- Teacher -->
-                  <div class="vert-group shweta">
+                  <div class="vert-group shweta" data-id="S20">
                     <a
                       class="btn btn-info btn-sm"
                       href="https://us02web.zoom.us/j/89095897936?pwd=UXJOdGl3YXZHOTJOWlhYeE9kOGEvQT09"
@@ -561,7 +574,7 @@
               <td class="tuesday day-group">
                 <div class="btn-group">
                   <!-- Teacher -->
-                  <div class="vert-group shweta">
+                  <div class="vert-group shweta" data-id="S25">
                     <a
                       class="btn btn-info btn-sm"
                       href="https://us02web.zoom.us/j/85492930416"
@@ -572,7 +585,7 @@
                   </div>
 
                   <!-- Teacher -->
-                  <div class="vert-group saranya">
+                  <div class="vert-group saranya" data-id="S35">
                     <a
                       class="btn btn-primary btn-sm"
                       href="https://us04web.zoom.us/j/89230063414"
@@ -591,7 +604,7 @@
               <td class="thursday day-group">
                 <div class="btn-group">
                   <!-- Teacher -->
-                  <div class="vert-group shweta">
+                  <div class="vert-group shweta" data-id="S25">
                     <a
                       class="btn btn-info btn-sm"
                       href="https://us02web.zoom.us/j/85492930416"
@@ -607,7 +620,7 @@
               <td class="friday day-group">
                 <div class="btn-group">
                   <!-- Teacher -->
-                  <div class="vert-group shweta">
+                  <div class="vert-group shweta" data-id="S20">
                     <a
                       class="btn btn-info btn-sm"
                       href="https://us02web.zoom.us/j/89095897936?pwd=UXJOdGl3YXZHOTJOWlhYeE9kOGEvQT09"
@@ -618,7 +631,7 @@
                   </div>
 
                   <!-- Teacher -->
-                  <div class="vert-group saranya">
+                  <div class="vert-group saranya" data-id="S35">
                     <a
                       class="btn btn-primary btn-sm"
                       href="https://us04web.zoom.us/j/89230063414"
@@ -644,7 +657,7 @@
               <td class="monday day-group">
                 <div class="btn-group">
                   <!-- Teacher -->
-                  <div class="vert-group shweta">
+                  <div class="vert-group shweta" data-id="J3">
                     <a
                       class="btn btn-info btn-sm"
                       href="https://us02web.zoom.us/j/89753395568"
@@ -654,7 +667,7 @@
                     <div class="shweta">Shweta</div>
                   </div>
                   <!-- Teacher -->
-                  <div class="vert-group abhinav">
+                  <div class="vert-group abhinav" data-id="S50">
                     <a
                       class="btn btn-secondary btn-sm"
                       href="https://us02web.zoom.us/j/84244177960"
@@ -670,7 +683,7 @@
               <td class="tuesday day-group">
                 <div class="btn-group">
                   <!-- Teacher -->
-                  <div class="vert-group shweta hide">
+                  <div class="vert-group shweta hide" data-id="S29">
                     <a
                       class="btn btn-info btn-sm"
                       href="https://us02web.zoom.us/j/82125097753"
@@ -680,7 +693,7 @@
                     <div class="shweta">Shweta</div>
                   </div>
                   <!-- Teacher -->
-                  <div class="vert-group abhinav">
+                  <div class="vert-group abhinav" data-id="S21">
                     <a
                       class="btn btn-primary btn-sm"
                       href="https://us02web.zoom.us/j/86215958711"
@@ -696,11 +709,10 @@
               <td class="wednesday day-group">
                 <div class="btn-group">
                   <!-- Teacher -->
-                  <div class="vert-group shweta">
+                  <div class="vert-group shweta" data-id="J3">
                     <a
                       class="btn btn-info btn-sm"
                       href="https://us02web.zoom.us/j/89753395568"
-                      target="_blank"
                       target="_blank"
                       >J3</a
                     >
@@ -708,7 +720,7 @@
                   </div>
 
                   <!-- Teacher -->
-                  <div class="vert-group abhinav hide">
+                  <div class="vert-group abhinav hide" data-id="S3">
                     <a
                       class="btn btn-primary btn-sm"
                       href="https://us02web.zoom.us/j/84751829403"
@@ -719,7 +731,7 @@
                   </div>
 
                   <!-- Teacher -->
-                  <div class="vert-group saranya hide">
+                  <div class="vert-group saranya hide" data-id="S31">
                     <a
                       class="btn btn-dark btn-sm"
                       href="https://us06web.zoom.us/j/88484764776?pwd=dWp5bmVRd0MwOFZUOHp3LzRTMjlJUT09"
@@ -735,7 +747,7 @@
               <td class="thursday day-group">
                 <div class="btn-group">
                  <!-- Teacher -->
-                 <div class="vert-group abhinav">
+                 <div class="vert-group abhinav" data-id="S50">
                   <a
                     class="btn btn-secondary btn-sm"
                     href="https://us02web.zoom.us/j/84244177960"
@@ -751,7 +763,7 @@
               <td class="friday day-group">
                 <div class="btn-group">
                   <!-- Teacher -->
-                  <div class="vert-group abhinav">
+                  <div class="vert-group abhinav" data-id="S21">
                     <a
                       class="btn btn-primary btn-sm"
                       href="https://us02web.zoom.us/j/86215958711"
@@ -761,7 +773,7 @@
                     <div class="abhinav">Abhinav</div>
                   </div>
                   <!-- Teacher -->
-                  <div class="vert-group preeti">
+                  <div class="vert-group preeti" data-id="S46">
                     <a
                       class="btn btn-dark btn-sm"
                       href="https://us02web.zoom.us/j/82398633488"
@@ -789,7 +801,7 @@
               <td class="monday day-group">
                 <div class="btn-group">
                   <!-- Teacher -->
-                  <div class="vert-group shweta">
+                  <div class="vert-group shweta" data-id="S42">
                     <a
                       class="btn btn-info btn-sm"
                       href="https://us02web.zoom.us/j/87259494665"
@@ -800,7 +812,7 @@
                   </div>
 
                   <!-- Teacher -->
-                  <div class="vert-group abhinav hide">
+                  <div class="vert-group abhinav hide" data-id="S1">
                     <a
                       class="btn btn-secondary btn-sm"
                       href="https://us02web.zoom.us/j/89671561913?pwd=NEF3ZS9lSHl1YUJtZTRPeWVQYnM3UT09"
@@ -812,7 +824,7 @@
                   </div>
 
                   <!-- Teacher -->
-                  <div class="vert-group saranya">
+                  <div class="vert-group saranya" data-id="S16">
                     <a
                       class="btn btn-primary btn-sm"
                       href="https://us04web.zoom.us/j/88900811736"
@@ -828,7 +840,7 @@
               <td class="tuesday day-group">
                 <div class="btn-group">
                   <!-- Teacher -->
-                  <div class="vert-group shweta">
+                  <div class="vert-group shweta" data-id="S23">
                     <a
                       class="btn btn-info btn-sm"
                       href="https://us02web.zoom.us/j/82932670898?pwd=cGRHbFZrdE53ai8ybWNITUhyNDIrUT09"
@@ -839,7 +851,7 @@
                   </div>
 
                   <!-- Teacher -->
-                  <div class="vert-group abhinav">
+                  <div class="vert-group abhinav" data-id="S30">
                     <a
                       class="btn btn-secondary btn-sm"
                       href="https://us02web.zoom.us/j/87459826324"
@@ -856,7 +868,7 @@
               <td class="wednesday day-group">
                 <div class="btn-group">
                   <!-- Teacher -->
-                  <div class="vert-group shweta">
+                  <div class="vert-group shweta" data-id="S23">
                     <a
                       class="btn btn-info btn-sm"
                       href="https://us02web.zoom.us/j/82932670898?pwd=cGRHbFZrdE53ai8ybWNITUhyNDIrUT09"
@@ -866,7 +878,7 @@
                     <div class="shweta">Shweta</div>
                   </div>
                   <!-- Teacher -->
-                  <div class="vert-group saranya">
+                  <div class="vert-group saranya" data-id="S33">
                     <a
                       class="btn btn-primary btn-sm"
                       href="https://us02web.zoom.us/j/84902412735?pwd=QvMYG62kwc_ngsbarGRLjy0y372ibl.1"
@@ -877,7 +889,7 @@
                     <div class="between">6:30</div>
                   </div>
                   <!-- Teacher -->
-                  <div class="vert-group abhinav hide">
+                  <div class="vert-group abhinav hide" data-id="S7">
                     <a
                       class="btn btn-secondary btn-sm"
                       href="https://us02web.zoom.us/j/83943591812"
@@ -894,7 +906,7 @@
               <td class="thursday day-group">
                 <div class="btn-group">
                   <!-- Teacher -->
-                  <div class="vert-group abhinav">
+                  <div class="vert-group abhinav" data-id="S30">
                     <a
                       class="btn btn-secondary btn-sm"
                       href="https://us02web.zoom.us/j/87459826324"
@@ -906,7 +918,7 @@
                   </div>
 
                   <!-- Teacher -->
-                  <div class="vert-group saranya">
+                  <div class="vert-group saranya" data-id="S16">
                     <a
                       class="btn btn-primary btn-sm"
                       href="https://us04web.zoom.us/j/88900811736"
@@ -922,7 +934,7 @@
               <td class="friday day-group">
                 <div class="btn-group">
                   <!-- Teacher -->
-                  <div class="vert-group shweta">
+                  <div class="vert-group shweta" data-id="S42">
                     <a
                       class="btn btn-info btn-sm"
                       href="https://us02web.zoom.us/j/87259494665"
@@ -932,7 +944,7 @@
                     <div class="shweta">Shweta</div>
                   </div>
                   <!-- Teacher -->
-                  <div class="vert-group abhinav hide">
+                  <div class="vert-group abhinav hide" data-id="S1">
                     <a
                       class="btn btn-secondary btn-sm"
                       href="https://us02web.zoom.us/j/89671561913?pwd=NEF3ZS9lSHl1YUJtZTRPeWVQYnM3UT09"
@@ -943,7 +955,7 @@
                     <div class="between">6:35</div>
                   </div>
                   <!-- Teacher -->
-                  <div class="vert-group saranya">
+                  <div class="vert-group saranya" data-id="S33">
                     <a
                       class="btn btn-primary btn-sm"
                       href="https://us02web.zoom.us/j/84902412735?pwd=QvMYG62kwc_ngsbarGRLjy0y372ibl.1"
@@ -988,7 +1000,7 @@
               <td class="sunday day-group">
                 <div class="btn-group">
                   <!-- Teacher -->
-                  <div class="vert-group shweta">
+                  <div class="vert-group shweta" data-id="S38">
                     <a
                       class="btn btn-primary btn-sm"
                       href="https://us02web.zoom.us/j/87653374572"
@@ -1011,7 +1023,7 @@
               <td class="tuesday day-group">
                 <div class="btn-group">
                   <!-- Teacher -->
-                  <div class="vert-group preeti">
+                  <div class="vert-group preeti" data-id="S46">
                     <a
                       class="btn btn-dark btn-sm"
                       href="https://us02web.zoom.us/j/82398633488"
@@ -1101,6 +1113,89 @@
       }
       //};
 
+      function filterByCourse() {
+        var courseMap = {
+          "J3": "Python Beginner" ,
+          "J4": "MIT App",
+          "S14": "Python Intermediate",
+          "S16": "AI/ML",
+          "S20": "JavaScript",
+          "S21": "AI/ML",
+          "S23": "Python Beginner",
+          "S25": "HTML/CSS",
+          "S26": "Python Intermediate",
+          "S26A": "MIT App",
+          "S28": "Python Advanced",
+          "S30": "MIT App",
+          "S33": "Scratch L2",
+          "S35": "Scratch L2",
+          "S37": "JavaScript",
+          "S38": "Python Beginner",
+          "S39": "Scratch L2",
+          "S42": "Python Beginner",
+          "S43": "Python Intermediate",
+          "S45": "Python Beginner",
+          "S46": "Python Intermediate",
+          "S47": "Python Beginner",
+          "S48": "Python Beginner",
+          "S49": "Scratch L1",
+          "S50": "Python Advanced"
+        }
+
+
+        var input,
+          filter,
+          table,
+          tr,
+          td,
+          i,
+          j,
+          k,
+          l,
+          txtValue,
+          ts,
+          tBtnGroup,
+          tVertGroup,
+          tVertGroups;
+        input = document.getElementById("courseList");
+        filter = input.value;
+
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        // Iterate over rows
+        for (i = 1; i < tr.length; i++) {
+          //for (i = 5; i < 6; i++) {
+          td = tr[i].getElementsByClassName("day-group");
+          if (td) {
+            // Iterate over columns
+            for (j = 0; j < td.length; j++) {
+              tBtnGroup = td[j].getElementsByClassName("btn-group")[0];
+              if (tBtnGroup) {
+                tVertGroups = tBtnGroup.getElementsByClassName("vert-group");
+                if (tVertGroups) {
+                  for (k = 0; k < tVertGroups.length; k++) {
+                    tVertGroup = tVertGroups[k];
+                    var batchId = tVertGroup.getAttribute('data-id')
+                    var course = courseMap[batchId]
+                    if (course == filter) {
+                      tVertGroup.style.visibility = "visible";
+                    } else if (filter == "Select Course") {
+                      tVertGroup.style.visibility = "visible";
+                    } else {
+                      tVertGroup.style.visibility = "hidden";
+                    }
+
+                    // Iterate of Vertical Group
+
+                  }
+                }
+              }
+            }
+          }
+        }
+
+      }
       function highlightCurrDay() {
         var d = new Date();
         // Fix for sunday as the Sunday return 0 whereas Sunday is in column 7 in our HTML
